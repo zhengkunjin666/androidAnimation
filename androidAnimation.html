@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android</title>
+    <style>
+        @-webkit-keyframes jump{
+            65%{
+                transform: scale(1.1);
+                margin: -100px auto 0;
+            }
+        }
+
+        .android{
+            width: 221px;
+            height: 242px;
+            margin: 250px auto 0;
+            animation: jump 2s ease-in-out infinite;
+        }
+        .head{
+            width: 145px;
+            height: 56px;
+            border-top-left-radius: 72px 56px;
+            border-top-right-radius: 72px 56px;
+            background-color: #ABC828;
+            margin: 250px auto 5px;
+            position: relative;
+        }
+        @-webkit-keyframes colorful{
+            0%{
+                background-color: #ff0000;
+            }
+            65%{
+                background-color: #152C5E;
+            }
+        }
+        .antenna{
+            width: 4px;
+            height: 25px;
+            border-radius: 12px;
+            background-color: #ABC828;
+            position: absolute;
+            -webkit-animation: colorful 2s linear infinite alternate;
+        }
+        .antenna.antenna-left{
+            top: -20px;
+            left: 40px;
+            transform: rotateZ(-30deg);
+        }
+        .antenna.antenna-right{
+            top: -20px;
+            left: 101px;
+            transform: rotateZ(30deg);
+        } 
+        .eyes{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            -webkit-animation: colorful 2s linear infinite alternate;
+        }
+        .eyes.eyes-left{
+            top: 21px;
+            left: 35px;
+        }
+        .eyes.eyes-right{
+            top: 21px;
+            left: 95px;
+        }
+        .body{
+            width: 145px;
+            height: 145px;
+            border-bottom-left-radius: 10%;
+            border-bottom-right-radius: 10%;
+            background-color: #ABC828;
+            margin: 0 auto;
+            position: relative;
+        }
+        .hand{
+            width: 30px;
+            height: 95px;
+            border-radius: 47px;
+            background-color: #ABC828;
+            position: absolute;
+        }
+        @-webkit-keyframes openlefthand{
+            65%{
+                transform: rotate(30deg);
+                transform-origin: right 40px;
+            }
+        }
+        .hand.hand-left{
+            top: 8px;
+            left: -32px;
+            animation: openlefthand 2s ease-in-out infinite;
+        }
+        @-webkit-keyframes openrighthand{
+            65%{
+                transform: rotate(-30deg);
+                transform-origin: left 40px;
+            }
+        }
+        .hand.hand-right{
+            top: 8px;
+            left: 147px;
+            animation: openrighthand 2s ease-in-out infinite;
+        }
+        .foots{
+            position: relative;
+            width: 145px;
+            height: 50px;
+            margin: 5px auto;
+        }
+        .foot{
+            width: 30px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: #ABC828;
+            position: absolute;
+        }
+        .foot.foot-left{
+            left: 30px;
+            animation: openrighthand 2s ease-in-out infinite;
+        }
+        .foot.foot-right{
+            right: 30px;
+            animation: openlefthand 2s ease-in-out infinite;
+        }
+        @-webkit-keyframes shrink{
+            65%{
+                width: 134px;
+                height: 90px;
+                border-radius: 50%;
+                margin: 0 auto;
+                box-shadow: 0 0 20px 20px #ccc;
+            }
+        }
+        .shadow{
+            width: 46px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 50px auto;
+            background: #ccc;
+            box-shadow: 0 0 10px 10px #ccc;
+            transform: scaleY(.3);
+            animation: shrink 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="android">
+        <div class="head">
+            <div class="antenna antenna-left"></div>
+            <div class="antenna antenna-right"></div>
+            <div class="eyes eyes-left"></div>
+            <div class="eyes eyes-right"></div>
+        </div>
+        <div class="body">
+            <div class="hand hand-left"></div>
+            <div class="hand hand-right"></div>
+        </div>
+        <div class="foots">
+            <div class="foot foot-left"></div>
+            <div class="foot foot-right"></div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</body>
+</html>
